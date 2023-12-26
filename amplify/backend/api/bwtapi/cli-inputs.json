@@ -1,0 +1,12 @@
+{
+  "version": 1,
+  "paths": {
+    "/user/{userid}": {
+      "name": "/user/{userid}",
+      "lambdaFunction": "bwtLambdaFunc",
+      "permissions": {
+        "setting": "open"
+      }
+    }
+  }
+}

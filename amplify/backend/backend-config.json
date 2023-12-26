@@ -1,0 +1,43 @@
+{
+  "api": {
+    "bwtapi": {
+      "dependsOn": [
+        {
+          "attributes": [
+            "Name",
+            "Arn"
+          ],
+          "category": "function",
+          "resourceName": "bwtLambdaFunc"
+        }
+      ],
+      "providerPlugin": "awscloudformation",
+      "service": "API Gateway"
+    }
+  },
+  "function": {
+    "bwtLambdaFunc": {
+      "build": true,
+      "providerPlugin": "awscloudformation",
+      "service": "Lambda"
+    }
+  },
+  "parameters": {
+    "AMPLIFY_function_bwtLambdaFunc_deploymentBucketName": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "bwtLambdaFunc"
+        }
+      ]
+    },
+    "AMPLIFY_function_bwtLambdaFunc_s3Key": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "bwtLambdaFunc"
+        }
+      ]
+    }
+  }
+}
